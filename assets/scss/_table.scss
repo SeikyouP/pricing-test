@@ -1,0 +1,223 @@
+@use 'mixins';
+
+.pricing-table {
+  &__section {
+    overflow: hidden;
+    height: 44px;
+    transition: height 0.5s ease;
+
+    &--open {
+      height: fit-content;
+    }
+
+    @media (max-width: 48em) {
+      background-color: var(--white);
+    }
+  }
+
+  &__row {
+    &--gray {
+      background-color: var(--light);
+
+      th,
+      td {
+        font-weight: 700;
+        color: var(--black);
+
+        @media (max-width: 62rem) {
+          font-size: 10pt;
+        }
+
+        @media (max-width: 48em) {
+          font-size: 12pt;
+        }
+      }
+    }
+  }
+
+  &__column {
+    position: relative;
+    border: 2px solid var(--body);
+    line-height: 2.75rem;
+
+    &--top {
+      line-height: 1;
+      padding: 2rem 0;
+
+      @media (max-width: 48em) {
+        border: none !important;
+        border-bottom: 1.25rem solid var(--light) !important;
+        &:last-child {
+          border-bottom: 0 !important;
+        }
+      }
+
+      &.pricing-table__column {
+        &--basic {
+          &::before {
+            text-align: left;
+            padding: 0 0.5rem;
+            position: absolute;
+            left: 0;
+            content: '';
+          }
+        }
+
+        &--business {
+          &::before {
+            text-align: left;
+            padding: 0 0.5rem;
+            position: absolute;
+            left: 0;
+            content: '';
+          }
+        }
+
+        &--pro {
+          &::before {
+            text-align: left;
+            padding: 0 0.5rem;
+            position: absolute;
+            left: 0;
+            content: '';
+          }
+        }
+      }
+    }
+
+    @media (max-width: 48em) {
+      & p {
+        text-align: right;
+        padding: 0 0.5rem;
+        position: relative;
+      }
+
+      &--empty {
+        display: none;
+      }
+
+      &--title {
+        & p {
+          font-weight: 400 !important;
+        }
+      }
+
+      & .bi-check2,
+      & .bi-x {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        &::before {
+          line-height: 44px;
+        }
+      }
+
+      &--basic {
+        font-weight: 400 !important;
+
+        &::before {
+          text-align: left;
+          padding: 0 0.5rem;
+          position: absolute;
+          left: 0;
+          content: 'Basic';
+          font-weight: 400 !important;
+        }
+      }
+
+      &--business {
+        font-weight: 400 !important;
+
+        &::before {
+          text-align: left;
+          padding: 0 0.5rem;
+          position: absolute;
+          left: 0;
+          content: 'Business';
+          font-weight: 400 !important;
+        }
+      }
+
+      &--pro {
+        font-weight: 400 !important;
+
+        &::before {
+          text-align: left;
+          padding: 0 0.5rem;
+          position: absolute;
+          left: 0;
+          content: 'Pro';
+          font-weight: 400 !important;
+        }
+      }
+    }
+  }
+
+  &__text {
+    &--best-value {
+      height: 1.25rem;
+      vertical-align: middle;
+      background-color: var(--business);
+      color: var(--white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 700;
+      font-size: 12pt;
+      text-transform: uppercase;
+      position: absolute;
+      top: -20.25px;
+      left: 0;
+      width: 100%;
+
+      @media (max-width: 48em) {
+        top: 0;
+      }
+    }
+
+    &--tier {
+      font-family: var(--primary-font);
+      font-weight: 700;
+      font-size: 18pt;
+      margin-bottom: 1rem;
+
+      @media (max-width: 48em) {
+        &:nth-child(2) {
+          padding-top: 1.25rem;
+        }
+      }
+    }
+
+    &--price {
+      font-family: var(--primary-font);
+      font-weight: 700;
+      font-size: 36pt;
+      font-weight: 400;
+      color: var(--dark);
+      margin-bottom: 1rem;
+    }
+
+    &--billed {
+      font-size: 12pt;
+      color: var(--light-gray);
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__button {
+    @include mixins.button;
+
+    &--basic {
+      background-color: var(--basic);
+    }
+
+    &--business {
+      background-color: var(--business);
+    }
+
+    &--pro {
+      background-color: var(--pro);
+    }
+  }
+}

@@ -1,0 +1,149 @@
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--body);
+  font-family: var(--secondary-font);
+}
+
+table {
+  background-color: var(--white);
+
+  @media (max-width: 48em) {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 48em) {
+  tr {
+    display: block;
+    border-bottom: 1.25rem solid var(--light);
+  }
+}
+
+td {
+  text-align: center;
+  width: 25%;
+
+  @media (max-width: 48em) {
+    background-color: var(--white);
+    display: block;
+    width: 100% !important;
+  }
+}
+
+th {
+  text-align: left;
+  padding: 0 0 0 1rem;
+  color: var(--gray);
+  line-height: 1.25 !important;
+
+  @media (max-width: 62rem) {
+    padding: 0 0.5rem;
+  }
+
+  @media (max-width: 48em) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 2.75rem;
+  }
+
+  span {
+    padding: 0 0.25rem;
+
+    @media (max-width: 62rem) {
+      padding: 0;
+    }
+
+    @media (max-width: 48em) {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 2rem auto;
+
+  @media (max-width: 48em) {
+    padding: 0 2rem;
+  }
+}
+
+td,
+th,
+p,
+span,
+i {
+  vertical-align: middle;
+}
+
+i {
+  &.bi-check2,
+  &.bi-question-circle {
+    color: var(--yes);
+  }
+
+  &.bi-check2,
+  &.bi-x {
+    font-size: 2rem;
+  }
+
+  &.bi-x {
+    color: var(--no);
+  }
+
+  &.bi-question-circle {
+    font-size: 1rem;
+  }
+
+  &.bi-chevron-up,
+  &.bi-chevron-down {
+    color: var(--gray);
+  }
+
+  &.bi-chevron-up {
+    display: none;
+
+    @media (max-width: 48em) {
+      margin-right: 0.5rem;
+    }
+
+    &--active {
+      display: inline-block;
+    }
+  }
+
+  &.bi-chevron-down {
+    display: inline-block;
+
+    @media (max-width: 48em) {
+      margin-right: 0.5rem;
+    }
+
+    &--active {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 48em) {
+  .hide {
+    display: none;
+  }
+}

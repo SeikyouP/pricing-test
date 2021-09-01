@@ -1,0 +1,16 @@
+@mixin button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--black);
+  height: 2.75rem;
+  width: 10.75rem;
+  color: var(--white);
+  border-radius: 0.5rem;
+  transition: background-color 0.25s, color 0.25s;
+  font-weight: 700;
+  font-family: var(--primary-font);
+  font-size: 14pt;
+  text-decoration: none;
+  margin: auto;
+}
