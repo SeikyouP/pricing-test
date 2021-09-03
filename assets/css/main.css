@@ -303,13 +303,9 @@ i.bi-chevron-down--active {
 .pricing-table__section {
   overflow: hidden;
   height: 44px;
-  -webkit-transition: height 0.5s ease;
-  transition: height 0.5s ease;
 }
 .pricing-table__section--open {
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
+  height: 100%;
 }
 @media (max-width: 48em) {
   .pricing-table__section {
