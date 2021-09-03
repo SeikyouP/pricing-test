@@ -4,7 +4,6 @@
   &__section {
     overflow: hidden;
     height: 44px;
-    transition: height 0.5s ease;
 
     &--open {
       height: fit-content;
