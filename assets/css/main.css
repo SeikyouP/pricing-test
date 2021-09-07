@@ -262,6 +262,7 @@ i.bi-check2, i.bi-question-circle {
 }
 i.bi-check2, i.bi-x {
   font-size: 2rem;
+  display: block;
 }
 i.bi-x {
   color: var(--no);
