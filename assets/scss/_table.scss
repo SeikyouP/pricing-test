@@ -3,10 +3,10 @@
 .pricing-table {
   &__section {
     overflow: hidden;
-    height: 44px;
+    height: 46px;
 
     &--open {
-      height: 100%;
+      height: fit-content;
     }
 
     @media (max-width: 48em) {
@@ -15,21 +15,19 @@
   }
 
   &__row {
-    &--gray {
-      background-color: var(--light);
+    th,
+    td {
+      font-weight: 700;
+      color: var(--black);
 
-      th,
-      td {
-        font-weight: 700;
-        color: var(--black);
+      @media (max-width: 62rem) {
+        font-size: 10pt;
+        // border: none;
+        // border-bottom: 0.25rem solid var(--light);
+      }
 
-        @media (max-width: 62rem) {
-          font-size: 10pt;
-        }
-
-        @media (max-width: 48em) {
-          font-size: 12pt;
-        }
+      @media (max-width: 48em) {
+        font-size: 12pt;
       }
     }
   }

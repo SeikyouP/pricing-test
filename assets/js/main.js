@@ -1,5 +1,5 @@
 let sectionOpen = document.querySelectorAll('.pricing-table__section')
-let sectionRow = document.querySelectorAll(' .pricing-table__row--gray .pricing-table__column--title')
+let sectionRow = document.querySelectorAll(' .pricing-table__row--list .pricing-table__column--title')
 let expandArrow = document.querySelectorAll('.bi-chevron-down')
 let collapseArrow = document.querySelectorAll('.bi-chevron-up')
 
